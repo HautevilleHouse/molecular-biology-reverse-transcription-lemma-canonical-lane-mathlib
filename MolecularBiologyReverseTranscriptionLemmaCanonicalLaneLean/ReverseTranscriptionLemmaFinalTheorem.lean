@@ -1,0 +1,18 @@
+import canonicalLaneMathlib.AdmissibleClass
+import MolecularBiologyReverseTranscriptionLemmaCanonicalLaneLean.ReverseTranscriptionEnzymeKinetics
+import MolecularBiologyReverseTranscriptionLemmaCanonicalLaneLean.ReverseTranscriptionPrimerBinding
+import MolecularBiologyReverseTranscriptionLemmaCanonicalLaneLean.ReverseTranscriptionExtensionFidelity
+import MolecularBiologyReverseTranscriptionLemmaCanonicalLaneLean.ReverseTranscriptionTermination
+
+namespace HautevilleHouse
+namespace MolecularBiologyReverseTranscriptionLemmaCanonicalLaneLean
+
+def ReverseTranscriptionClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem reverse_transcription_endgame (A : AdmissibleClass) :
+    ReverseTranscriptionClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end MolecularBiologyReverseTranscriptionLemmaCanonicalLaneLean
+end HautevilleHouse
